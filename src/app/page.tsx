@@ -190,7 +190,7 @@ export default function HomePage() {
         <section id="home" className="pt-40 md:pt-48 mb-32">
           <div className="flex flex-col items-start max-w-3xl">
             <div className="relative mb-10 group cursor-pointer">
-              <div className="w-24 h-24 md:w-32 md:h-32 bg-white/5 border border-white/10 overflow-hidden relative z-10 flex items-center justify-center grayscale">
+              <div className="w-24 h-24 md:w-32 md:h-32 bg-white/5 border border-white/10 overflow-hidden relative z-10 flex items-center justify-center md:grayscale">
                 <span className="text-6xl md:text-8xl opacity-80 group-hover:opacity-100 transition-opacity">☮︎</span>
               </div>
               <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-black z-20" />
@@ -283,7 +283,7 @@ export default function HomePage() {
                       className="p-4 flex items-center gap-3 hover:bg-white/10 group"
                     >
                       <div
-                        className={`p-1.5 bg-white/5 ${skill.color ?? ""} grayscale group-hover:grayscale-0 transition-all duration-300`}
+                        className={`p-1.5 bg-white/5 ${skill.color ?? ""} md:grayscale md:group-hover:grayscale-0 transition-all duration-300`}
                       >
                         <skill.icon size={18} />
                       </div>
@@ -312,7 +312,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {PROJECTS.map((project) => (
               <GlassCard key={project.id} className="group flex flex-col h-full hover:border-blue-400/30 transition-all">
-                <div className={`aspect-[16/9] w-full relative overflow-hidden border-b border-white/10 ${project.id === "1" ? "bg-black flex items-center justify-center" : "bg-gray-900 grayscale group-hover:grayscale-0 transition-all duration-500"}`}>
+                <div className={`aspect-[16/9] w-full relative overflow-hidden border-b border-white/10 ${project.id === "1" ? "bg-black flex items-center justify-center" : "bg-gray-900 md:grayscale md:group-hover:grayscale-0 transition-all duration-500"}`}>
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -385,7 +385,7 @@ export default function HomePage() {
                   <GlassCard className="p-6 h-full flex flex-col justify-between hover:bg-white/5 transition-all group">
                     <div className="flex items-center justify-between mb-4">
                       <div
-                        className={`p-2 bg-white/5 rounded-md ${stat.color ?? ""} group-hover:scale-110 grayscale group-hover:grayscale-0 transition-all duration-300`}
+                        className={`p-2 bg-white/5 rounded-md ${stat.color ?? ""} group-hover:scale-110 md:grayscale md:group-hover:grayscale-0 transition-all duration-300`}
                       >
                         <Icon size={24} />
                       </div>
